@@ -1,0 +1,64 @@
+execute pathogen#infect()
+
+filetype on
+filetype plugin on
+syntax on
+
+" Theme
+let g:material_theme_style = 'palenight'
+let g:material_terminal_italics = 1
+set termguicolors
+set background=dark
+colorscheme material
+let g:lightline = { 'colorscheme': 'material' }
+
+set laststatus=2
+
+set number
+
+let mapleader=' '
+
+map <leader>s :source ~/.vimrc<CR>
+
+set hidden
+set history=100
+
+filetype indent on
+set nowrap
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set autoindent
+
+ "Search settings
+set hlsearch
+nnoremap <silent> <leader><Esc> :nohlsearch<Bar>:echo<CR> 
+set ic
+
+set showmatch
+
+" Open last file
+nnoremap <leader><leader> :e#<CR>
+
+" Split navigation
+nnoremap <leader>j <C-W><C-J>
+nnoremap <leader>k <C-W><C-K>
+nnoremap <leader>l <C-W><C-L>
+nnoremap <leader>h <C-W><C-H>
+
+" Nerd Commenter prefs
+let g:NERDSpaceDelims = 1
+let g:NERDCommentEmptyLines = 1
+let g:NERDDefaultAlign = 'left'
+
+" Nerd Tree prefs
+map <C-i> :NERDTreeToggle<CR>
+let NERDTreeMapOpenInTab='<leader><ENTER>'
+
+" Git-Gutter prefs
+set signcolumn=yes
+set updatetime=100
+
+" Fzf.vim prefs
+map <C-t> :Files<CR>
