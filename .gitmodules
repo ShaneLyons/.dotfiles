@@ -28,3 +28,6 @@
 [submodule "vim/bundle/fzf.vim"]
 	path = vim/bundle/fzf.vim
 	url = https://github.com/junegunn/fzf.vim
+[submodule "vim/bundle/syntax"]
+	path = vim/bundle/syntax
+	url = https://github.com/octol/vim-cpp-enhanced-highlight.git
